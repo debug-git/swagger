@@ -1,0 +1,25 @@
+spring:
+  profiles:
+    active: test
+
+---
+spring:
+  profiles: dev
+server:
+  port: 8080
+  servlet:
+    context-path: /
+  tomcat:
+    uri-encoding: UTF-8
+value: 开发环境
+
+---
+spring:
+  profiles: test
+server:
+  port: 8080
+  servlet:
+    context-path: /
+  tomcat:
+    uri-encoding: UTF-8
+value: 测试环境
