@@ -29,6 +29,9 @@ public class MyInterCeptor implements HandlerInterceptor {
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
         System.out.println("postHandle被调用");
+        //设置支持跨域请求，用于前后端分离项目
+        response.setHeader("Access-Control-Allow-Origin", "*");
+        response.setHeader("Access-Control-Allow-Method", "GET,POST,PUT,DELETE,OPTIONS");
     }
 
     @Override
